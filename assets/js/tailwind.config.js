@@ -3,7 +3,7 @@ module.exports = {
   // tailwindcss를 사용할 페이지
   content: [
     "./ko/**/*.{js,jsx,ts,tsx}"
-],
+],  
   theme: {
     extend: {
       
