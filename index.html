@@ -49,39 +49,77 @@
   <link rel="icon" sizes="192x192"href="/icon.png">
   <link rel="icon" sizes="57x57"href="/icon57.png">
   <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
   <!-- SCRIPTS -->
-  <script type="text/javascript" src="/vendors/modernizr.js"></script>
+  <!-- <script type="text/javascript" src="/vendors/modernizr.js"></script> -->
   <!-- tailwindCSS -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <!-- 구글 태그 관리자 -->
 </head>
-<body>
+<body class="w-screen h-screen">
   <div>
-    <main>
+    <!-- banner-top -->
+    <div class="banner-top w-full h-10 leading-10 bg-black text-center">
+      <p class="text-white">놓치면 아쉬운 이벤트가 종료되기 전 살펴보세요!</p>
+    </div>
+    <!-- /banner-top -->
+    <main class="max-w-screen-2xl w-full m-auto">
       <section>
-        <header>
+
+        <header class=" w-full h-20 pl-6 pr-6 box-border flex items-center justify-between space">
           <!-- Logo -->
-          <div class="logo bg-gray-200 w-full h-20 pt-10">CREDIT</div>
+          <div class=""><h1 class="logo font-bold text-xl">CREDIT</h1></div>
           <!--/Logo -->
             
           <nav>
-            <ul>
+            <ul class="flex gap-12">
               <li>
-                <a class="nav-link" href=""></a>
+                <a class="nav-link" href="">회사 소개</a>
               </li>
               
               <li>
-                <a class="nav-link" href="">HOME</a>
+                <a class="nav-link" href="">서비스 소개</a>
+              </li>
+
+              <li>
+                <a class="nav-link" href="">포트폴리오</a>
+              </li>
+
+              <li>
+                <a class="nav-link" href="">Q&A</a>
+              </li>
+              
+              <li>
+                <a class="nav-link" href="">채용</a>
               </li>
             </ul>
           </nav>
 
-          <!-- btn-contact -->  
-          <button class="btn-contact">
-            <span>BUTTON</span>
-          </button>
-          <!-- /btn-contact -->
+          <div class="header-c-right flex items-center">
+
+            <!-- btn-darkmode -->
+            <div class="btn-darkmode relative w-12 h-6 border-1 leading-7 rounded-full bg-gray-200 cursor-pointer mr-5">
+              <div class="handle bg-white w-4 h-4 absolute top-1/2 left-1 rounded-full -translate-y-1/2"></div>
+            </div>
+            <!-- /btn-darkmode -->
+
+            <!-- btn-contact -->  
+            <button class="btn-contact border border-stone-900 pt-2 pl-6 pb-2 pr-6 rounded-full">
+              <span>3초 문의하기</span>
+            </button>
+            <!-- /btn-contact -->
+          </div>
         </header>
+        <div class="banner-main">
+          <h2 class="txt-main text-6xl leading-tight font-bold text-center mt-16 mb-8">
+            웹 사이트의 모든 것,<br>
+            크레드잇에서 쉽고 간편하게
+          </h2>
+          <div class="banner-img">
+            <img class="m-auto w-full" src="assets/images/230307_main-banner-01.svg" alt="메인 배너 이미지">
+            <video src=""></video>
+          </div>
+        </div>
       </section>
     </main>
   </div>
