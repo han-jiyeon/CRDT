@@ -1,0 +1,38 @@
+
+/* next art */
+@font-face{
+   font-family:'next art'; 
+   src:url('../fonts/next_art/NEXT ART_Light.otf'); 
+   /* src:url('../fonts/next_art/NEXT\ ART_Bold?#iefix') format(‘embedded-opentype’),
+   url('../fonts/NotoSansCJKkr/NotoSansCJKkr/next art-Regular.woff') format(‘woff’),
+   url('../fonts/next_art/NEXT\ ART_Bold.otfRegular.otf') format(‘otf’); */
+   font-weight: 200;
+   font-style: normal;
+}
+@font-face{
+   font-family:'next art'; 
+   src:url('../fonts/next_art/NEXT ART_Regular.otf'); 
+   /* src:url('../fonts/next_art/NEXT\ ART_Bold?#iefix') format(‘embedded-opentype’),
+   url('../fonts/NotoSansCJKkr/NotoSansCJKkr/next art-Regular.woff') format(‘woff’),
+   url('../fonts/next_art/NEXT\ ART_Bold.otfRegular.otf') format(‘otf’); */
+   font-weight: 300;
+   font-style: normal;
+}
+@font-face{
+   font-family:'next art'; 
+   src:url('../fonts/next_art/NEXT ART_SemiBold.otf'); 
+   /* src:url('../fonts/next_art/NEXT\ ART_Bold?#iefix') format(‘embedded-opentype’),
+   url('../fonts/NotoSansCJKkr/NotoSansCJKkr/next art-Regular.woff') format(‘woff’),
+   url('../fonts/next_art/NEXT\ ART_Bold.otfRegular.otf') format(‘otf’); */
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face{
+  font-family:'next art'; 
+  src:url('../fonts/next_art/NEXT ART_Bold.otf'); 
+  /* src:url('../fonts/next_art/NEXT\ ART_Bold?#iefix') format(‘embedded-opentype’),
+  url('../fonts/NotoSansCJKkr/NotoSansCJKkr/next art-Regular.woff') format(‘woff’),
+  url('../fonts/next_art/NEXT\ ART_Bold.otfRegular.otf') format(‘otf’); */
+  font-weight: 500;
+  font-style: normal;
+}

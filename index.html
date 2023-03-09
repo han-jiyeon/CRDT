@@ -26,7 +26,7 @@
   <!-- iOS 전화번호 자동 링크 X -->
   <meta name="format-detection" content="telephone=no"/>
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="https://teamcredit.kr/favicon.ico"/>
+  <!-- <link rel="shortcut icon" href="https://teamcredit.kr/favicon.ico"/> -->
   <link rel="icon" type="image/png" href="/favicon.ico">
   <!-- Windows 8 아이콘 -->
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -56,7 +56,10 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <!-- 구글 태그 관리자 -->
 </head>
-<body class="w-screen h-screen">
+<body class="w-full h-full">  
+  <!-- cursor -->
+  <div class="cursor"></div>
+  <!-- app -->
   <div>
     <!-- banner-top -->
     <div class="banner-top w-full h-10 leading-10 bg-black text-center">
@@ -66,63 +69,150 @@
     <!-- /banner-top -->
     <main class="max-w-screen-2xl w-full m-auto">
       <section>
-
-        <header class=" w-full h-20 pl-6 pr-6 box-border flex items-center justify-between space">
+        <h3 class="hidden"></h3>
+        <header class="relative w-full h-20 box-border flex items-center first-letter:space">
           <!-- Logo -->
-          <div class=""><h1 class="logo font-bold text-xl">CREDIT</h1></div>
+          <div class=" mr-auto"><a class="" href="#none">
+              <h2 class="hidden">로고</h2>
+              <h1 class="logo btn-magnetic font-semibold text-xl tracking-wide pt-4 pr-8 pb-4">CREDIT</h1>
+            </a></div>
           <!--/Logo -->
             
-          <nav>
-            <ul class="flex gap-12">
-              <li>
+          <nav class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+            <h2 class="hidden">사이트 메뉴 네비게이션</h2>
+            <ul class="flex">
+              <li class="pt-4 pl-8 pr-8 pb-4">
                 <a class="nav-link" href="">회사 소개</a>
               </li>
               
-              <li>
+              <li class="pt-4 pl-8 pr-8 pb-4">
                 <a class="nav-link" href="">서비스 소개</a>
               </li>
 
-              <li>
+              <li class="pt-4 pl-8 pr-8 pb-4">
                 <a class="nav-link" href="">포트폴리오</a>
               </li>
 
-              <li>
+              <li class="pt-4 pl-8 pr-8 pb-4">
                 <a class="nav-link" href="">Q&A</a>
               </li>
               
-              <li>
+              <li class="pt-4 pl-8 pr-8 pb-4">
                 <a class="nav-link" href="">채용</a>
               </li>
             </ul>
           </nav>
 
-          <div class="header-c-right flex items-center">
+          <div class="header-c-right flex items-center ml-auto">
 
-            <!-- btn-darkmode -->
-            <div class="btn-darkmode relative w-12 h-6 border-1 leading-7 rounded-full bg-gray-200 cursor-pointer mr-5">
-              <div class="handle bg-white w-4 h-4 absolute top-1/2 left-1 rounded-full -translate-y-1/2"></div>
-            </div>
-            <!-- /btn-darkmode -->
+            <!-- wrap-darkToggle -->
+            <div class="wrap-darkToggle flex mr-5 gap-2 items-center font-light text-gray-500">
+              <!-- <span class="text-xs">Light</span> -->
+              <input type="checkbox" class="hidden" id="darkToggle">
+              <label for="darkToggle" class="btn-darkmode light flex relative w-12 h-6 border-1 leading-7 rounded-full cursor-pointer">
+                <div class="handle bg-white w-4 h-4 absolute top-1/2 left-1 rounded-full -translate-y-1/2"></div>
+              </label>
+              <!-- <span class="text-xs">Dark</span> -->
+          </div>
+          <!-- /wrap-darkToggle -->
 
             <!-- btn-contact -->  
-            <button class="btn-contact border border-stone-900 pt-2 pl-6 pb-2 pr-6 rounded-full">
-              <span>3초 문의하기</span>
+            <button class="btn-contact btn-magnetic border border-stone-600 pt-3 pl-6 pb-3 pr-6 leading-none rounded-full font-semibold">
+              <!-- Contact&nbsp;Us -->
+              <span>1분&nbsp;문의하기</span>
             </button>
             <!-- /btn-contact -->
           </div>
         </header>
         <div class="banner-main">
-          <h2 class="txt-main text-6xl leading-tight font-bold text-center mt-16 mb-8">
+          <h2 class="hidden">메인 배너 슬라이드</h2>
+          <h2 class="txt-main text-6xl leading-tight font-bold text-center mt-24 mb-8">
             웹 사이트의 모든 것,<br>
             크레드잇에서 쉽고 간편하게
           </h2>
           <div class="banner-img">
             <img class="m-auto w-full" src="assets/images/230307_main-banner-01.svg" alt="메인 배너 이미지">
-            <video src=""></video>
+            <!-- <video src=""></video> -->
+          </div>
+        </div>
+      </section>
+      <!-- section2 -->
+      <section class="w-full mt-40 ml-16 mr-16 mb-40">
+        <h3 class="hidden">필요한 서비스 검색 계산기</h3>
+        <div class="c-calculator flex">
+          <div class="c-left">
+            <div class="wrap-title mb-14">
+              <span class="mb-2">#간단견적확인</span>
+              <h3 class="text-4xl font-bold">내게 맞는 서비스는?</h3>
+            </div>
+            <!--  -->
+            <div class="form-calculator">
+              <form action="" id="oneday_box">
+                <div class="info">
+                    <div class="car_box flex flex-wrap items-center gap-10">
+                        <p class="text-xl">나는</p>
+                        <div class="form-group col-sm-5">
+                            <select class="select-box company w-64" id="company_oneday" name="company" onchange="" required="">
+                                <option value="start" selected="" disabled="">스타트업</option>
+                                <option value="현대">현대</option>
+                                <option value="기아">기아</option>
+                                <option value="쉐보레">쉐보레</option>
+                                <option value="벤츠">벤츠</option>
+                                <option value="BMW">BMW</option>
+                                <option value="한국지엠">한국지엠</option>
+                                <option value="허머">허머</option>
+                            </select>
+                        </div>
+                        <p class="text-xl">이고</p>
+                        <div class="form-group col-sm-4 cf">
+                            <select class="select-box model" id="model_oneday" name="model" onchange="" required="">
+                                <option value="start" selected="" disabled="">맞춤 디자인 및 개발</option>
+                            </select>
+                        </div>
+                        <p class="text-xl">을/를 이용한</p>
+
+                        
+                        <select class="select-box package" id="package_oneday" name="package">
+                          <option value="start" selected="" disabled="">웹사이트</option>
+                          <option value="원데이G (Basic)">베이직하게</option>
+                          <option value="원데이GS (Premium)">프리미엄으로</option>
+                      </select>
+                      <p class="text-xl">을/를 제작하고 싶어요</p>
+                    </div>
+                    <!--.car_box-->
+
+                    <div class="wrap-btn text-center">
+                    <div id="submit_oneday" class="submit btn-magnetic h-14 text-white text-xl mt-16">3초 견적 확인하기</div>
+                    <div id="reset_oneday" class="reset text-sm font-normal mt-3 text-gray-500">Reset</div>
+                  </div>
+                </div>
+
+            </form>
+            </div>
+          </div>
+          <div class="c-right">
+
+            <div class="total-box ml-auto mt-14 ml-10 mb-14 mr-10">
+              <ul class="rec">
+                  <li class="text">추천 서비스<input class="recommend_service" readonly=""></li>
+                  <li class="text">내 차 등급<input class="recommend_level" readonly=""></li>
+                  <li class="text">추천 패키지<input class="recommend_package" readonly=""></li>
+              </ul>
+              <span class="line"></span>
+              <h2 class="title">예상 견적</h2>
+              <input type="text" id="price_oneday" class="price" name="price" oninput="sum();" value="0" readonly="">
+              <div class="total_inner cf">
+                  <input type="text" id="total_oneday" name="total" readonly="" class="total"><span class="won">원</span>
+              </div>
+              <!--.total_inner-->
+
+          </div>
+          <!--.total_box-->
           </div>
         </div>
       </section>
     </main>
   </div>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
